@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-api",
+  "version": "1.0.0",
+  "description": "API do portfolio do Marco Bruno",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcobrunodev/portfolio-api.git"
+  },
+  "author": "Marco Bruno",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/marcobrunodev/portfolio-api/issues"
+  },
+  "homepage": "https://github.com/marcobrunodev/portfolio-api#readme"
+}
