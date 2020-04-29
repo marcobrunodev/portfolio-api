@@ -2,9 +2,9 @@
   "name": "portfolio-api",
   "version": "1.0.0",
   "description": "API do portfolio do Marco Bruno",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
