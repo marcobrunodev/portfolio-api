@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/marcobrunodev/portfolio-api/issues"
   },
-  "homepage": "https://github.com/marcobrunodev/portfolio-api#readme"
+  "homepage": "https://github.com/marcobrunodev/portfolio-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
