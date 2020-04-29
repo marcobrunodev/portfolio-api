@@ -1,6 +1,7 @@
-import express from 'express';
+import { config } from 'dotenv';
+import server from './api/server';
 
-const app = express();
-const PORT = 3001;
+config();
+const { PORT } = process.env;
 
-app.listen(PORT);
+server.listen(PORT);
