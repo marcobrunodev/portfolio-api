@@ -18,5 +18,9 @@
   "homepage": "https://github.com/marcobrunodev/portfolio-api#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "sucrase": "^3.13.0"
   }
 }
