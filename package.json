@@ -4,7 +4,9 @@
   "description": "API do portfolio do Marco Bruno",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "allTest": "mocha --require sucrase/register ./test/**/**/*.test.js",
+    "test": "docker-compose run api yarn allTest"
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,18 @@
   },
   "homepage": "https://github.com/marcobrunodev/portfolio-api#readme",
   "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "helmet": "^3.22.0",
+    "mongoose": "^5.9.11",
+    "morgan": "^1.10.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -28,8 +38,10 @@
     "eslint-plugin-prettier": "^3.1.3",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.0",
+    "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
-    "sucrase": "^3.13.0"
+    "sucrase": "^3.13.0",
+    "supertest": "^4.0.2"
   }
 }
