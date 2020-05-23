@@ -29,15 +29,10 @@ const LivesSchema = new Schema(
       minlength: 2,
       maxlength: 50,
     },
-    titleShort: {
+    shortTitle: {
       type: String,
-      required: true,
       minlength: 2,
       maxlength: 30,
-    },
-    photo: {
-      type: Buffer,
-      required: true,
     },
     startDate: {
       type: Date,
@@ -55,6 +50,10 @@ const LivesSchema = new Schema(
       type: String,
       required: true,
       minlength: 20,
+    },
+    shortDescription: {
+      type: String,
+      required: true,
     },
     guest: Guest,
   },

@@ -27,6 +27,7 @@
     "helmet": "^3.22.0",
     "mongoose": "^5.9.11",
     "morgan": "^1.10.0",
+    "restify-errors": "^8.0.2",
     "winston": "^3.2.1"
   },
   "devDependencies": {

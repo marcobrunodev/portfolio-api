@@ -17,12 +17,12 @@ const randomLivesInfoWithoutGuest = (options = {}) => {
     blank,
     {
       title: faker.lorem.words(5),
-      titleShort: faker.lorem.words(3),
-      photo: faker.image.animals(300, 300),
+      shortTitle: faker.lorem.words(3),
       startDate: faker.date.future(),
       finishDate: faker.date.future(),
       goals: generateGoals(faker.random.number(5)),
       description: faker.lorem.paragraph(),
+      shortDescription: faker.lorem.paragraph(4),
     },
     { ...options }
   );
