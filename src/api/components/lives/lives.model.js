@@ -31,6 +31,7 @@ const LivesSchema = new Schema(
     },
     shortTitle: {
       type: String,
+      required: true,
       minlength: 2,
       maxlength: 30,
     },

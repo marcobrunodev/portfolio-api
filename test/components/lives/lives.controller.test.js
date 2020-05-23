@@ -35,6 +35,71 @@ describe('Lives Controller', () => {
       expect(body).to.have.property('error');
     });
 
+    it('should return status 400 and msg with field and error when send a JSON without startDate', async () => {
+      const live = LivesBuilder.randomLivesInfoWithoutGuest();
+      const { startDate, ...liveWithoutStartDate } = live;
+
+      const { statusCode, body } = await request(server)
+        .post(`${PREFIX}/lives`)
+        .send(liveWithoutStartDate);
+
+      expect(statusCode).to.equals(400);
+      expect(body).to.have.property('field');
+      expect(body).to.have.property('error');
+    });
+
+    it('should return status 400 and msg with field and error when send a JSON without finishDate', async () => {
+      const live = LivesBuilder.randomLivesInfoWithoutGuest();
+      const { finishDate, ...liveWithoutFinishDate } = live;
+
+      const { statusCode, body } = await request(server)
+        .post(`${PREFIX}/lives`)
+        .send(liveWithoutFinishDate);
+
+      expect(statusCode).to.equals(400);
+      expect(body).to.have.property('field');
+      expect(body).to.have.property('error');
+    });
+
+    it('should return status 400 and msg with field and error when send a JSON without goals', async () => {
+      const live = LivesBuilder.randomLivesInfoWithoutGuest();
+      const { goals, ...liveWithoutGoals } = live;
+
+      const { statusCode, body } = await request(server)
+        .post(`${PREFIX}/lives`)
+        .send(liveWithoutGoals);
+
+      expect(statusCode).to.equals(400);
+      expect(body).to.have.property('field');
+      expect(body).to.have.property('error');
+    });
+
+    it('should return status 400 and msg with field and error when send a JSON without description', async () => {
+      const live = LivesBuilder.randomLivesInfoWithoutGuest();
+      const { description, ...liveWithoutDescription } = live;
+
+      const { statusCode, body } = await request(server)
+        .post(`${PREFIX}/lives`)
+        .send(liveWithoutDescription);
+
+      expect(statusCode).to.equals(400);
+      expect(body).to.have.property('field');
+      expect(body).to.have.property('error');
+    });
+
+    it('should return status 400 and msg with field and error when send a JSON without shortDescription', async () => {
+      const live = LivesBuilder.randomLivesInfoWithoutGuest();
+      const { shortDescription, ...liveWithoutShortDescription } = live;
+
+      const { statusCode, body } = await request(server)
+        .post(`${PREFIX}/lives`)
+        .send(liveWithoutShortDescription);
+
+      expect(statusCode).to.equals(400);
+      expect(body).to.have.property('field');
+      expect(body).to.have.property('error');
+    });
+
     it('should return status 200 when send a valid JSON', async () => {
       const live = LivesBuilder.randomLivesInfoWithoutGuest();
       const { statusCode } = await request(server)
